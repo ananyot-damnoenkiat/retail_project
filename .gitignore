@@ -205,3 +205,15 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# Terraform sensitive files
+.terraform/                
+*.tfstate                  
+*.tfstate.backup
+*.tfvars                   
+.terraform.tfstate.lock.info
+
+# Airflow
+logs/
+plugins/
+google_credentials.json
