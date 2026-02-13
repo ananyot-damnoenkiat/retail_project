@@ -4,7 +4,7 @@ USER root
 
 # Install Java (required for Spark)
 RUN apt-get update && \
-    && apt-get install -y --no-install-recommends \
+    apt-get install -y --no-install-recommends \
         openjdk-17-jre-headless \
         procps \
     && apt-get autoremove -yqq --purge \
@@ -18,4 +18,4 @@ USER airflow
 
 # Install additional Python packages
 COPY requirements.txt /requirements.txt
-RUN pip install --no-cache-dir - r /requirements.txt
+RUN pip install --no-cache-dir -r /requirements.txt

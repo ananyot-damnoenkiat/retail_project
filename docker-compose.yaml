@@ -21,7 +21,7 @@ services:
     command: webserver
     ports:
       - "8080:8080"
-    volumns:
+    volumes:
       - ./dags:/opt/airflow/dags
       - ./scripts:/opt/airflow/scripts
       - ./data:/opt/airflow/data
